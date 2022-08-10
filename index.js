@@ -17,9 +17,12 @@ const api = () => {
 
             for(let multiResult of result){
                 for(let singleResult of multiResult.children){
-                    console.log(singleResult);
-                    resultContext.innerHTML += singleResult + '\n';
+                    if(singleResult.innerHTML != "-"){
+                        resultContext.innerHTML += singleResult.innerHTML + "<br>";
+                        console.log(singleResult);
+                    }   
                 }
+                resultContext.innerHTML += "<br>";
             }
             
         }
