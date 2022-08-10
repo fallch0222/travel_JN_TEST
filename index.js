@@ -16,13 +16,14 @@ const api = () => {
             result = result.getElementsByTagName("list");
 
             for(let multiResult of result){
+                const NewElement = document.createElement('h2');
                 for(let singleResult of multiResult.children){
                     if(singleResult.innerHTML != "-"){
-                        resultContext.innerHTML += singleResult.innerHTML + "<br>";
+                        NewElement.innerHTML += singleResult.innerHTML + "<br>";
                         console.log(singleResult);
                     }   
                 }
-                resultContext.innerHTML += "<br>";
+                NewElement.innerHTML += "<br>";
             }
             
         }
